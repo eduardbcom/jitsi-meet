@@ -40,6 +40,13 @@ type Props = {
  * @extends Component
  */
 class Root extends PureComponent<Props> {
+    url = 'https://jitsi.codeda.com/room1';
+    userInfo = {
+        displayName: 'User',
+        email: 'user@example.com',
+        avatar: 'https:/gravatar.com/avatar/abc123',
+    };
+
     /**
      * Implements React's {@link Component#render()}.
      *
@@ -49,7 +56,7 @@ class Root extends PureComponent<Props> {
     render() {
         return (
             <App
-                { ...this.props } />
+                { ...this.props } url={this.url} userInfo={this.userInfo} />
         );
     }
 }
